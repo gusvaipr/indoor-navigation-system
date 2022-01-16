@@ -22,7 +22,6 @@ coverage_ignore_dirs="\
 # Run coverage for ins-node and ins-server
 eval mkdir -p $coverage_report_dir
 eval lcov --directory . --capture --output-file coverage.info
-eval lcov --remove coverage.info $coverage_ignore_dirs --output-file $coverage_report_dir/cpp_coverage.info
 eval lcov --list coverage.info
 # Run coverage for ins-app
 eval cd $ins_app_dir
